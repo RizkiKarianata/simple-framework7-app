@@ -1,0 +1,136 @@
+<template>
+	<div class="page">
+		<div class="navbar">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner sliding">
+				<div class="left">
+					<a href="/">
+						<i class="icon f7-icons if-not-md">arrow_left</i>
+						<i class="icon material-icons if-md">backward</i>
+					</a>
+				</div>
+				<div class="title">Add</div>
+			</div>
+		</div>
+		<div class="page-content">
+			<div class="list no-hairlines-md">
+				<ul>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Nama</div>
+							<div class="item-input-wrap">
+								<input type="text" placeholder="Masukkan Nama" id="namacok" name="namacok" autocomplete="off">
+								<span class="input-clear-button"></span>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Tempat Lahir</div>
+							<div class="item-input-wrap">
+								<input type="text" placeholder="Masukkan Tempat Lahir" id="tempat_lahir" name="tempat_lahir" autocomplete="off">
+								<span class="input-clear-button"></span>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Tanggal Lahir</div>
+							<div class="item-input-wrap">
+								<input type="date" placeholder="Pilih Tanggal Lahir" id="tanggal_lahir" name="tanggal_lahir" autocomplete="off">
+							</div>
+						</div>
+					</li>	
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Jenis Kelamin</div>
+							<div class="item-input-wrap input-dropdown-wrap">
+								<select placeholder="Pilih Jenis Kelamin" id="jenis_kelamin" name="jenis_kelamin">
+									<option value="">Pilih Jenis Kelamin</option>
+									<option value="Laki Laki">Laki Laki</option>
+									<option value="Perempuan">Perempuan</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Agama</div>
+							<div class="item-input-wrap input-dropdown-wrap">
+								<select placeholder="Pilih Agama" id="agama" name="agama">
+									<option value="">Pilih Agama</option>
+									<option value="Islam">Islam</option>
+									<option value="Kristen">Kristen</option>
+									<option value="Katolik">Katolik</option>
+									<option value="Hindu">Hindu</option>
+									<option value="Buddha">Buddha</option>
+									<option value="Kong Hu Cu">Kong Hu Cu</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Alamat</div>
+							<div class="item-input-wrap">
+								<textarea id="alamat" name="alamat" placeholder="Tuliskan Alamat"></textarea>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="block">
+				<button class="col button button-large button-raised button-round button-fill" @click="adddata">Simpan</button>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+	export default {
+		mounted() {
+			var $this = this;
+			var app = this.$app;
+			var $$ = this.$$;
+			var self = this;
+		},
+		methods: {
+			adddata: function() {
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				var self = this;
+				var namacok = $$('#namacok').val();
+				var tempat_lahir = $$('#tempat_lahir').val();
+				var tanggal_lahir = $$('#tanggal_lahir').val();
+				var jenis_kelamin = $$('#jenis_kelamin').val();
+				var agama = $$('#agama').val();
+				var alamat = $$('#alamat').val();
+
+				if(namacok == "" || tempat_lahir == "" || tanggal_lahir == "" || jenis_kelamin == "" || agama == "" || alamat == "") {
+					app.dialog.alert("Ada bagian yang kosong", 'Peringatan')
+				}else {
+					app.request.postJSON('http://localhost:3000/api/crud', {nama: namacok, tempat_lahir: tempat_lahir, tanggal_lahir: tanggal_lahir, jenis_kelamin: jenis_kelamin, agama: agama, alamat: alamat}, function (data, status, xhr) {
+						var status = JSON.parse(status);
+						console.log(status);
+						if(status == 200) {
+							if (!self.notificationFull) {
+								self.notificationFull = self.$app.notification.create({
+									icon: '<img src="../../static/icons/favicon.png">',
+									title: 'CRUD',
+									titleRightText: '',
+									subtitle: 'Pemberitahuan',
+									text: 'Data Berhasil Disimpan',
+									closeTimeout: 3000,
+								});
+							}
+							self.notificationFull.open();
+							app.views.main.router.navigate('/');
+						}else {
+							app.dialog.alert('Gagal untuk menyimpan data');
+						}
+					});
+				}
+			},
+		},
+	}
+</script>

@@ -1,0 +1,118 @@
+<template>
+	<div class="page">
+		<div class="navbar">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner sliding">
+				<div class="left">
+					<a href="/">
+						<i class="icon f7-icons if-not-md">arrow_left</i>
+						<i class="icon material-icons if-md">backward</i>
+					</a>
+				</div>
+				<div class="title">Read</div>
+			</div>
+		</div>
+		<div class="page-content">
+			{{#if user}}
+			<div class="list no-hairlines-md">
+				<ul>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Nama</div>
+							<div class="item-input-wrap">
+								<textarea name="nama" id="nama" style="height: 45px;" readonly="">{{user.nama}}</textarea>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Tempat Lahir</div>
+							<div class="item-input-wrap">
+								<input type="text" placeholder="Masukkan Tempat Lahir" id="tempat_lahir" name="tempat_lahir" autocomplete="off" value="{{user.tempat_lahir}}" readonly="">
+								<span class="input-clear-button"></span>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Tanggal Lahir</div>
+							<div class="item-input-wrap">
+								<input type="date" placeholder="Pilih Tanggal Lahir" id="tanggal_lahir" name="tanggal_lahir" autocomplete="off" value="{{tanggal_lahir}}" readonly="">
+							</div>
+						</div>
+					</li>	
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Jenis Kelamin</div>
+							<div class="item-input-wrap input-dropdown-wrap">
+								<select placeholder="Pilih Jenis Kelamin" id="jenis_kelamin" name="jenis_kelamin" disabled="">
+									<option value="{{user.jenis_kelamin}}">{{user.jenis_kelamin}}</option>
+									<option value="Laki Laki">Laki Laki</option>
+									<option value="Perempuan">Perempuan</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Agama</div>
+							<div class="item-input-wrap input-dropdown-wrap">
+								<select placeholder="Pilih Agama" id="agama" name="agama" readonly="" disabled="">
+									<option value="{{user.agama}}">{{user.agama}}</option>
+									<option value="Islam">Islam</option>
+									<option value="Kristen">Kristen</option>
+									<option value="Katolik">Katolik</option>
+									<option value="Hindu">Hindu</option>
+									<option value="Buddha">Buddha</option>
+									<option value="Kong Hu Cu">Kong Hu Cu</option>
+								</select>
+							</div>
+						</div>
+					</li>
+					<li class="item-content item-input">
+						<div class="item-inner">
+							<div class="item-title item-label">Alamat</div>
+							<div class="item-input-wrap">
+								<textarea id="alamat" name="alamat" placeholder="Tuliskan Alamat" readonly="">{{user.alamat}}</textarea>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			{{else}}
+			{{/if}}
+		</div>
+	</div>
+</template>
+<script>
+	export default {
+		mounted() {
+			var $this = this;
+			var app = this.$app;
+			var $$ = this.$$;
+			var self = this;
+		},
+		on: {
+			pageInit: function () {
+				var self = this;
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				var id = this.$route.params.id;
+				var dataJSON = new Array();
+				var d = new Date();
+				app.request.get('http://localhost:3000/api/crud/'+id, (user) => {
+					dataJSON = JSON.parse(user);
+					var tampil = dataJSON.response[0];
+					var date = new Date(tampil.tanggal_lahir);
+					var datestring = date.getFullYear() + "-" + ("0" + (date.getMonth()+1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2);
+					console.log(tampil);
+					self.$setState({
+						user: tampil,
+						tanggal_lahir: datestring,
+					});
+				});
+			},
+		},
+	}
+</script>

@@ -1,0 +1,122 @@
+<template>
+	<div class="page">
+		<div class="navbar">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner sliding">
+				<div class="title">Data Diri</div>
+				<div class="subnavbar">
+					<form data-search-container=".virtual-list" data-search-item="li" data-search-in=".item-title" class="searchbar searchbar-init">
+						<div class="searchbar-inner">
+							<div class="searchbar-input-wrap">
+								<input type="search" placeholder="Cari Seseorang"/>
+								<i class="searchbar-icon"></i>
+								<span class="input-clear-button"></span>
+							</div>
+							<span class="searchbar-disable-button if-not-aurora">Batal</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="fab fab-right-bottom color-blue">
+			<a href="/create/">
+				<i class="icon f7-icons if-not-md">plus</i>
+				<i class="icon f7-icons if-not-md">plus</i>
+				<i class="icon material-icons md-only">add</i>
+				<i class="icon material-icons md-only">add</i>
+			</a>
+		</div>
+		<div class="searchbar-backdrop"></div>
+		<div class="page-content">
+			<div class="list simple-list searchbar-not-found">
+				<ul>
+					<li>Data tidak ditemukan</li>
+				</ul>
+			</div>
+			<div class="list virtual-list media-list searchbar-found"></div>
+		</div>
+	</div>
+</template>
+<script>
+	export default {
+		mounted() {
+			var $this = this;
+			var app = this.$app;
+			var $$ = this.$$;
+			root: this.$app;
+			cargarListaClinicas();
+
+			function cargarListaClinicas() {
+				var items = [];
+				var dataJSON = new Array();
+				app.request.get('http://localhost:3000/api/crud/', function (data,status) {
+					dataJSON = JSON.parse(data);
+					var tampil = dataJSON.response;
+					console.log(tampil);
+					for(var i = 0; i < tampil.length; i++) {
+						var semuadata = tampil[i];
+						var nama = semuadata.nama;
+						var id = semuadata.id;
+						items.push({
+							title: nama,
+							subtitle: "Info Selengkapnya",
+							id: id
+						});
+					}
+					var virtualList = app.virtualList.create({
+						el: '.virtual-list',
+						items: items,
+						searchAll: function (query, items) {
+							var found = [];
+							for (var i = 0; i < items.length; i++) {
+								if (items[i].title.toLowerCase().indexOf(query.toLowerCase()) >= 0 || query.trim() === '') found.push(i);
+							}
+							return found;
+						},
+						itemTemplate:
+						'<li class="swipeout deleted-callback" data-id="{{id}}">' +
+						'<div class="swipeout-content">' +
+						'<a href="/read/{{id}}/" class="item-link item-content">' +
+						'<div class="item-inner">' +
+						'<div class="item-title-row">' +
+						'<div class="item-title" id="nama" name="nama">{{title}}</div>' +
+						'</div>' +
+						'<div class="item-subtitle">{{subtitle}}</div>' +
+						'</div>' +
+						'</a>' +
+						'</div>' +
+						'<div class="swipeout-actions-right">' +
+						'<a href="/read/{{id}}/" class="color-blue">Read</a>' +
+						'<a href="/update/{{id}}/" class="color-orange">Update</a>' +
+						'<a href="#" data-confirm="Apakah Anda yakin ingin menghapus {{title}} ?" class="color-red swipeout-delete hapus-data">Delete</a>' +
+						'</div>' +
+						'</li>',
+						height: app.theme === 'ios' ? 63 : (app.theme === 'md' ? 73 : 46),
+					});
+					$$('.deleted-callback').on('swipeout:deleted', function () {
+						var dataid = $$(this).data("id");
+						app.request({
+							url: 'http://localhost:3000/api/crud/'+dataid,
+							dataType: 'json',
+							contentType: "application/json",
+							method: 'DELETE',
+							statusCode: {
+								200: function (xhr) {
+									console.log("Berhasil menghapus data", dataid);
+								},
+							},
+							success: function (data, status, xhr) {
+								app.dialog.alert('Data berhasil dihapus');
+							},
+							error: function (xhr, status) {
+								console.log(xhr);
+								console.log(JSON.stringify(xhr));
+								console.log(status);
+							}
+						});
+					});
+				});
+			}
+		},
+	}	
+</script>

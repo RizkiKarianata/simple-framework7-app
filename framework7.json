@@ -1,0 +1,40 @@
+{
+  "cwd": "C:\\Users\\pavilion\\Documents\\ProjectSourceTree\\Data Diri",
+  "type": [
+    "web",
+    "cordova"
+  ],
+  "name": "Data Diri",
+  "framework": "core",
+  "template": "tabs",
+  "bundler": "webpack",
+  "cssPreProcessor": "stylus",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false,
+  "webpack": {
+    "developmentSourceMap": true,
+    "productionSourceMap": true,
+    "hashAssets": false,
+    "preserveAssetsPaths": false,
+    "inlineAssets": true
+  },
+  "pkg": "io.framework7.myapp",
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen"
+    ]
+  }
+}
