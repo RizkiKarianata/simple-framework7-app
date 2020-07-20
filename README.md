@@ -1,6 +1,12 @@
 # CRUD Framework7
 Aplikasi CRUD Sederhana Berbasis Mobile yang menggunakan Framework7 berguna untuk teman - teman yang baru belajar mobile menggunakan Framework7
 
+# Usage
+* Install Node.js
+* Buka direktori Zodiak Weton di Command Prompt
+* Ketik npm start
+* Otomatis terbuka localhost:8080
+
 ## Framework7 CLI Options
 
 Framework7 app created with following options:
@@ -99,3 +105,8 @@ framework7 assets --ui
 
 Love Framework7? Support project by donating or pledging on patreon:
 https://patreon.com/vladimirkharlampidi
+
+## License
+MIT License 2020, Rizki Karianata.
+
+The data may not be used for commercial purposes.
