@@ -77,23 +77,22 @@
 
 `Notes To Contribute`
 
-Make sure to not commit generated files from your dist folder.
-All changes need to be made in the source files located in the `src` folder.
+<p>Make sure to not commit generated files from your dist folder. All changes need to be made in the source files located in the `src` folder.</p>
 
 * Change the `scss` files to adapt styles
 * Change the nunjucks based `html` files or the content defining `json` files to adapt layout and content
 * Change the `js` files to adapt the application code
 
-Always run a build and test the results before committing.
+<p>Always run a build and test the results before committing.</p>
 
 ## 📝 License
 
-- Copyright © 2020 Rizki Karianata
-- **Simple Framework7 App is an open source project licensed under the MIT license**
+* Copyright © 2020 Rizki Karianata
+* **Simple Framework7 App is an open source project licensed under the MIT license**
 
 ## ☕️ Suppport & Donation
 
-Love Simple Framework7 App? Support this project by donating or sharing with others in need.
+<p>Love Simple Framework7 App? Support this project by donating or sharing with others in need.</p>
 
 <a href="https://www.buymeacoffee.com/rizkikarianata"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/> </a>
 
