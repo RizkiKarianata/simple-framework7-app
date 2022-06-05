@@ -43,7 +43,7 @@ const conn = mysql.createConnection({
 	  host: 'localhost',
 	  user: 'root',
 	  password: '',
-	  database: 'db_crud'
+	  database: 'db_simple_framework7_app'
 });
  
 //connect to database
