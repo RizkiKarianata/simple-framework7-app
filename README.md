@@ -64,8 +64,8 @@
 
 ## 🤝 Contributing
 
-I really appreciate contributions, issues and feature requests because this application is far from perfect. Feel free to Pull Request and make changes to this project.
-Since this is an open source project I finished it myself. There may be many features or things that could be improved or added. So I really appreciate your help.
+<p>I really appreciate contributions, issues and feature requests because this application is far from perfect. Feel free to Pull Request and make changes to this project.</p>
+<p>Since this is an open source project I finished it myself. There may be many features or things that could be improved or added. So I really appreciate your help.</p>
 
 `Steps To Contribute`
 
