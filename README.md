@@ -3,7 +3,6 @@
 <!-- ![Collegetivity Preview](https://user-images.githubusercontent.com/46257169/171705042-12da6cff-6118-45f9-9349-04d9704ca12a.png) -->
 
 <p align="center">Simple Framework7 App is an application that is used to manage data such as creating, viewing, modifying, and deleting data. Built using Framework7. 💖 </p>
-<div align="center">
 
 <p align="center">
 <img src="https://img.shields.io/github/contributors/RizkiKarianata/simple-framework7-app?style=flat-square">
@@ -13,6 +12,11 @@
 <img src="https://img.shields.io/github/last-commit/RizkiKarianata/simple-framework7-app.svg?style=flat-square">
 <img src="https://img.shields.io/github/languages/code-size/RizkiKarianata/simple-framework7-app?style=flat-square">
 <img src="https://img.shields.io/github/license/RizkiKarianata/simple-framework7-app?style=flat-square">
+</p>
+
+<p align="center">
+  <a href="https://karianata.com/simple-framework7-app/demo">Demo Page</a>&nbsp;&nbsp;&nbsp;
+  <a href="https://karianata.com/simple-framework7-app/docs">Documentation Page</a>&nbsp;&nbsp;&nbsp;
 </p>
 
 # CRUD Framework7
