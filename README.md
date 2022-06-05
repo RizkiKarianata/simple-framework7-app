@@ -96,3 +96,5 @@ Always run a build and test the results before committing.
 Love Simple Framework7 App? Support this project by donating or sharing with others in need.
 
 <a href="https://www.buymeacoffee.com/rizkikarianata"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/> </a>
+
+**Made with ❤️ Rizki Karianata**
