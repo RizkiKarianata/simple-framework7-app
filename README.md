@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the Simple Framework7 App! 👋 </h1>
 
-![Simple Framework7 App](https://user-images.githubusercontent.com/52366240/172039609-70082dfe-5152-42bd-85ec-e0942404869d.png)
+![Simple Framework7 App](https://user-images.githubusercontent.com/52366240/172041273-9cf1450c-030f-48c8-9f6f-4a8cf2095995.png)
 
 <p align="center">Simple Framework7 App is an application that is used to manage data such as creating, viewing, modifying, and deleting data. Built using Framework7. 💖 </p>
 
