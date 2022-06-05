@@ -31,6 +31,21 @@
 
 ## 🎯 How To Use
 
+#### Using the built-in ready to use from the release (Recommended)
+
+Download the latest project release from the [Release Page](https://github.com/RizkiKarianata/simple-framework7-app "Release Page"). Open the Simple Framework7 App project folder using a terminal and type `npm run dev`. To explore the source code you can use a text editor such as Visual Studio Code.
+
+#### Build manually
+
+* Before starting, make sure you have Node.js installed first
+* If you have installed Node.js. Run the command git clone which is `https://github.com/RizkiKarianata/simple-framework7-app`
+* Install the dependencies using the node package manager of your choice. For example run `npm install` in terminal
+* To run the application you can run the command `npm run dev`. And the application will automatically open using port 8080 on your default browser
+
+#### Build to APK
+
+* You can run commands like in the `NPM Scripts` below by adding `npm run`. Example `npm run build-dev-cordova-android` on terminal
+
 ## 🛠 NPM Scripts
 
 * 🔥 `start` - run development server
@@ -67,7 +82,7 @@
 <p>I really appreciate contributions, issues and feature requests because this application is far from perfect. Feel free to Pull Request and make changes to this project.</p>
 <p>Since this is an open source project I finished it myself. There may be many features or things that could be improved or added. So I really appreciate your help.</p>
 
-`Steps To Contribute`
+#### Steps To Contribute
 
 * Fork it ( https://github.com/RizkiKarianata/simple-framework7-app )
 * Create your feature branch (`git checkout -b my-new-feature`)
@@ -75,7 +90,7 @@
 * Push to the branch (`git push origin my-new-feature`)
 * Create a new Pull Request
 
-`Notes To Contribute`
+#### Notes To Contribute
 
 Make sure to not commit generated files from your dist folder. All changes need to be made in the source files located in the `src` folder.
 
