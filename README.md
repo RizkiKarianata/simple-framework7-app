@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to the Simple Framework7 App! 👋</h1>
+<h1 align="center">Welcome to the Simple Framework7 App! 👋 </h1>
 
 <!-- ![Collegetivity Preview](https://user-images.githubusercontent.com/46257169/171705042-12da6cff-6118-45f9-9349-04d9704ca12a.png) -->
 
@@ -15,20 +15,23 @@
 </p>
 
 <p align="center">
-  <a href="https://karianata.com/simple-framework7-app/demo">Demo Page</a>&nbsp;&nbsp;&nbsp;
-  <a href="https://karianata.com/simple-framework7-app/docs">Documentation Page</a>&nbsp;&nbsp;&nbsp;
+<a href="https://karianata.com/simple-framework7-app/demo">Demo Page</a>&nbsp;&nbsp;&nbsp;
+<a href="https://karianata.com/simple-framework7-app/docs">Documentation Page</a>&nbsp;&nbsp;&nbsp;
 </p>
 
-# CRUD Framework7
-Aplikasi CRUD Sederhana Berbasis Mobile yang menggunakan Framework7 berguna untuk teman - teman yang baru belajar mobile menggunakan Framework7
+## 💾 Requirements
 
-# Usage
-* Install Node.js
-* Buka direktori Zodiak Weton di Command Prompt
-* Ketik npm start
-* Otomatis terbuka localhost:8080
+* `Node.js` - used for the entire application development process. Whether it's making an API or something
+* `Web Browser` - can be used as an emulator to build applications. Example [Chrome, Firefox, Safari & Opera]
+* `Internet` - because many use CDN and to make it easier to find solutions to all problems
+* `Composer` - make it easier for developers to manage PHP project dependencies
+* `Android SDK` - to simplify the process of building applications
+* `Gradle` - function to perform application building automatically
+* `Java Development Kit` - used for support in developing or building an application
 
-## NPM Scripts
+## 🎯 How To Use
+
+## 🛠 NPM Scripts
 
 * 🔥 `start` - run development server
 * 🔧 `dev` - run development server
@@ -41,21 +44,52 @@ Aplikasi CRUD Sederhana Berbasis Mobile yang menggunakan Framework7 berguna untu
 * 📱 `build-dev-cordova-android` - build cordova Android app using development mode (faster build without minification and optimization)
 * 📱 `build-prod-cordova-android` - build cordova Android app
 
-## Documentation & Resources
+## 📋 Documentation & Resources
 
-* [Framework7 Core Documentation](https://framework7.io/docs/)
+* [Framework7](https://framework7.io/)
+* [Apache Cordova](https://cordova.apache.org/)
+* [Node.js](https://nodejs.org/en/)
+* Did you build a framework or other features? Open up Pull Requests and put yours here! 😃
 
+## 📆 Release Date
 
+* v1.0.0 : 05 June 2022
 
-* [Framework7 Icons Reference](https://framework7.io/icons/)
-* [Community Forum](https://forum.framework7.io)
+## 🧑 Author
 
-## Support Framework7
+👤 <a href="https://www.facebook.com/rizky.slankers.3386"> **Rizki Karianata**</a>
+* Facebook : <a href="https://www.facebook.com/rizky.slankers.3386"> Rizki Karianata</a>
+* Instagram : <a href="https://www.instagram.com/rizkikarianata"> @rizkikarianata</a>
+* Youtube : <a href="https://www.youtube.com/channel/UCwhkJwsq6swJrerdP0tixJA">  @rizkikarianata </a>
+* LinkedIn :  <a href="https://www.linkedin.com/in/rizkikarianata">@rizkikarianata </a>
+
+## 🤝 Contributing
+
+`Steps To Contribute`
+
+* Fork it ( https://github.com/RizkiKarianata/simple-framework7-app )
+* Create your feature branch (`git checkout -b my-new-feature`)
+* Commit your changes (`git commit -am 'Add some feature'`)
+* Push to the branch (`git push origin my-new-feature`)
+* Create a new Pull Request
+
+`Notes To Contribute`
+
+Make sure to not commit generated files from your dist folder.
+All changes need to be made in the source files located in the `src` folder.
+
+* Change the `scss` files to adapt styles.
+* Change the nunjucks based `html` files or the content defining `json` files to adapt layout and content.
+* Change the `js` files to adapt the application code
+
+Always run a build and test the results before committing.
+
+## 📝 License
+
+- Copyright © 2020 Rizki Karianata
+- **Collegetivity is open-sourced software licensed under the MIT license**
+
+## ☕️ Suppport & Donation
 
 Love Framework7? Support project by donating or pledging on patreon:
 https://patreon.com/vladimirkharlampidi
-
-## License
-MIT License 2020, Rizki Karianata.
-
-The data may not be used for commercial purposes.
