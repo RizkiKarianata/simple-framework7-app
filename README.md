@@ -2,7 +2,7 @@
 
 <!-- ![Collegetivity Preview](https://user-images.githubusercontent.com/46257169/171705042-12da6cff-6118-45f9-9349-04d9704ca12a.png) -->
 
-<p align="center">Mazer is an Admin Dashboard Template that can help you develop faster. Made with Bootstrap 5. No jQuery dependency.</p>
+<p align="center">Simple Framework7 App is an application that is used to manage data such as creating, viewing, modifying, and deleting data. Built using Framework7. 💖 </p>
 <div align="center">
 
 <p align="center">
