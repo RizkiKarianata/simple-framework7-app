@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to the Simple Framework7 App! 👋 </h1>
 
-<!-- ![Collegetivity Preview](https://user-images.githubusercontent.com/46257169/171705042-12da6cff-6118-45f9-9349-04d9704ca12a.png) -->
+![Simple Framework7 App](https://user-images.githubusercontent.com/52366240/172039609-70082dfe-5152-42bd-85ec-e0942404869d.png)
 
 <p align="center">Simple Framework7 App is an application that is used to manage data such as creating, viewing, modifying, and deleting data. Built using Framework7. 💖 </p>
 
@@ -59,8 +59,8 @@
 
 * Facebook : <a href="https://www.facebook.com/rizky.slankers.3386"> Rizki Karianata</a>
 * Instagram : <a href="https://www.instagram.com/rizkikarianata"> @rizkikarianata</a>
-* Youtube : <a href="https://www.youtube.com/channel/UCwhkJwsq6swJrerdP0tixJA">  @rizkikarianata </a>
-* LinkedIn :  <a href="https://www.linkedin.com/in/rizkikarianata">@rizkikarianata </a>
+* Youtube : <a href="https://www.youtube.com/channel/UCwhkJwsq6swJrerdP0tixJA"> @rizkikarianata</a>
+* LinkedIn :  <a href="https://www.linkedin.com/in/rizkikarianata"> @rizkikarianata</a>
 
 ## 🤝 Contributing
 
@@ -87,8 +87,8 @@ Always run a build and test the results before committing.
 
 ## 📝 License
 
-- Copyright © 2020 Rizki Karianata
-- **Simple Framework7 App is an open source project licensed under the MIT license**
+* Copyright © 2020 Rizki Karianata
+* **Simple Framework7 App is an open source project licensed under the MIT license**
 
 ## ☕️ Suppport & Donation
 
