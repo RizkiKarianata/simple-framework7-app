@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to the Simple Framework7 App! 👋 </h1>
+<h1 align="center">Welcome to Simple Framework7 App! 👋 </h1>
 
 ![Simple Framework7 App](https://user-images.githubusercontent.com/52366240/172041273-9cf1450c-030f-48c8-9f6f-4a8cf2095995.png)
 
